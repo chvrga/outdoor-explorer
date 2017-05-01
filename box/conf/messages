@@ -1,7 +1,7 @@
 # You can specialize this file for each language.
 # For example, for French create a messages.fr file
 #
-
+ 
 appname=Outdoor Explorer
 appnaming=Outdoor Exploring 
 withcol=with: 
