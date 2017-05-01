@@ -1,0 +1,16 @@
+All curl commands assume you are in the box/conf/ directory.
+
+Create a REST API instance: 
+curl -v -X POST  --anyauth --user <dbuser>:<dbpwd> \
+	 -H "Content-Type:application/json" -d @./create_restapi.json  \
+	 http://localhost:8002/v1/rest-apis
+
+Enable collection lexicon:
+curl -v -X PUT --anyauth -u <dbuser>:<dbpwd>  \
+	 -H "Content-Type:application/json" -d @./collection-lexicion.json  \
+	 http://localhost:8002/manage/v2/databases/<dbname>/properties
+
+Add range path indexes:
+curl -v -X PUT --anyauth --user <dbuser>:<dbpwd>  -i \
+	 -H "Content-type: application/json" -d @./pandoraIndexes.json \
+	 http://localhost:8002/manage/LATEST/databases/<dbname>/properties

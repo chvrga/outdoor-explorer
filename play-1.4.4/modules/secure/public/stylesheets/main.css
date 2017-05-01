@@ -1,0 +1,98 @@
+.top {
+	padding: 0 5%;
+	width: 80%;
+	margin: auto;
+}
+
+.centered {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.bottom {
+	margin-top: 10%;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	max-width: 220px;
+	max-height: 220px;
+}
+
+dl {
+	margin-top: 20px;
+}
+
+.dl-horizontal dt {
+	text-align: left;
+}
+
+.micro {
+	width: 32px;
+	height: 32px;
+}
+
+.logo {
+	margin-top: 20px;
+}
+
+.medium {
+	/* 	height: 128px; */
+	
+}
+
+.chart-right {
+	width: 30%;
+	margin-right: 40px;
+}
+
+.chart-left {
+	width: 50%;
+	margin-left: 40px;
+}
+
+.padded {
+	padding: 20px;
+}
+
+.search {
+	position: absolute;
+	bottom: 8px;
+	right: 10px;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.search-input {
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+
+.top50 {
+	margin-top: 50px;
+}
+
+.top45 {
+	margin-top: 45px;
+}
+
+.bottom50 {
+	margin-bottom: 50px;
+}
+
+.bottom45 {
+	margin-bottom: 45px;
+	height: 100px;
+}
+
+.chart-div {
+	width: 250px;
+	height: 250px;
+}
+
+.half {
+	width: 45%;
+}

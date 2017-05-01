@@ -1,0 +1,26 @@
+<div class="top container-fluid" id="usersMain">
+	<!-- Nothing selected yet, main search page -->
+	<div class="row clearfix center-block">
+		<!-- Current destinations -->
+		<h3 class="top20">&{'users'}</h3>
+		<div class="bottom50" data-bind='template: {name: "usersListTemplate", templateOptions: { users: users}}'></div>
+		<!-- Add new destination button -->
+		<div class="bottom50"></div>
+	</div>
+
+	<div class="bottom"></div>
+</div>
+
+<script type="text/html" id="usersListTemplate">
+	{{each(i,user) users}}
+		<div class="col-md-3 small-box box" data-bind="attr: {style: 'background-image: url(\'' + user.avatar +'\')'}, click: function(){
+					showUserDetails(user);
+				} ">
+		<div class="user-box-in">
+			<h4>
+				<a href="#">{{= user.username}}</a>
+			</h4>
+		</div> 
+		</div> 
+	{{/each}}
+</script>

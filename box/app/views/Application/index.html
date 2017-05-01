@@ -1,0 +1,41 @@
+#{extends 'main.html' /} #{set title:'Box' /}
+
+<script type="text/javascript" src="/public/javascripts/lib.js"></script>
+<script type="text/javascript" src="/public/javascripts/explorer.js"></script>
+<script type="text/javascript" src="/public/javascripts/newdestination.js"></script>
+<script type="text/javascript" src="/public/javascripts/register.js"></script>
+<script type="text/javascript" src="/public/javascripts/resortdetails.js"></script>
+<script type="text/javascript" src="/public/javascripts/userdetails.js"></script>
+<script type="text/javascript" src="/public/javascripts/users.js"></script>
+
+
+<!-- header and navbar -->
+<header id="headContainer">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				#{if connected}	
+					<a class="navbar-brand" href="/">&{'appnaming'}<i>&{'withcol'}${currentUser}</i></a>
+				#{/if}
+				#{else}
+					<a class="navbar-brand" href="/">&{'appname'}</a>
+				#{/else}
+			</div>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="/"><i class="fa fa-home"></i>&{'home'}</a></li>
+				<li><a href="#users" data-bind="click: showUsers"><i class="fa fa-comment"></i>&{'users'}</a></li> 
+				#{if connected}
+				<li><a href="#newdestination" data-bind="click: addNewDestination"><i class="fa fa-shield"></i>&{'add'}</a></li>
+				<li><a href="logout"><i class="fa fa-shield"></i>&{'signout'}</a></li> 
+				#{/if} 
+				#{else}
+				<li><a href="login"><i class="fa fa-shield"></i>&{'signin'}</a></li>
+				<li><a href="#register" data-bind="click: register"><i class="fa fa-comment"></i>&{'register'}</a></li> 
+				#{/else}
+			</ul>
+		</div>
+	</nav>
+</header>
+<!-- 	main content and injected views -->
+<div id="mainContainer" data-bind="html : view"></div>

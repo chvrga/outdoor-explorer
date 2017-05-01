@@ -1,0 +1,1 @@
+{"rest-api": { "name": "<servername>", "port": "8011", "database": "<dbname>", "modules-database": "<modulesname>" } }

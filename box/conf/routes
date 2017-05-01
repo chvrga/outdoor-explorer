@@ -1,0 +1,47 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+# Import Secure routes
+*      /                module:secure
+
+
+# Home page
+GET     /										Application.index
+
+GET     /signin									Application.signin
+GET     /explorer								Application.explorer
+GET		/resortdetails							Application.resortdetails
+GET		/users									Application.users
+GET		/userdetails							Application.userdetails
+
+GET  	/getAllDestinations						Application.getAllDestinations
+GET  	/getAllUserData							Application.getAllUserData
+
+GET  	/searchDestinations						Application.searchDestinations
+
+GET  	/register								Application.register
+POST  	/createUser								Application.createUser
+
+GET		/newdestination							Application.newdestination
+POST  	/createDestination						Application.createDestination
+
+POST	/addToList								Application.addToList
+
+GET		/findWhatUserLikes						Application.findWhatUserLikes
+GET		/findWhatUserWishes						Application.findWhatUserWishes
+
+GET		/findWhoLikesDestination				Application.findWhoLikesDestination
+GET		/findWhoSavedDestination				Application.findWhoSavedDestination
+GET		/findSimilarByLikes						Application.findSimilarByLikes
+GET		/findSimilarByWishlist					Application.findSimilarByWishlist
+GET		/doILikeIt								Application.doILikeIt
+
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}

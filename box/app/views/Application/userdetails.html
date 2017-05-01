@@ -1,0 +1,104 @@
+<div class="top container-fluid" id="userDetails">
+	<form class="form-horizontal" name="registerUserForm" method="POST" action="@{Application.updateUser()}" target="edit_target" enctype="multipart/form-data">
+	
+	<input type="text" style="display: none;" id="userid" name="userid" data-bind="value: id">
+	
+		<!-- 		Current user details -->
+		<div class="row clearfix">
+
+			<div id="edit_error" class="form-group hidden">
+				<div class="col-sm-offset-2 col-sm-10">
+					<label class="error">&{'updateusererr'}</label>
+				</div>
+			</div>
+
+			<div class="col-md-2 pull-left">
+				<img class="avatar small-box box" alt="name" title="name" data-bind="attr: { 'src': avatar }"> 
+				<input class="changelogo" data-bind="visible: editMode" type="file" id="avatar" name="avatar">
+			</div>
+
+			<div class="col-md-9 pull-left bottom45">
+				<h1 data-bind="text: name"></h1>
+				<dl class="dl-horizontal">
+					<dt>&{'unamecol'}</dt>
+					<dd data-bind="text: username"></dd>
+					<dt>&{'firstcol'}</dt>
+					<dd data-bind="text: firstname, visible: !editMode()"></dd>
+					<dd data-bind="visible: editMode">
+						<input type="text" class="form-control" id="firstname" name="firstname" placeholder="First name" data-bind="value: firstname">
+					</dd>
+					<dt>&{'lastcol'}</dt>
+					<dd data-bind="text: lastname, visible: !editMode()"></dd>
+					<dd data-bind="visible: editMode">
+						<input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last name" data-bind="value: lastname">
+					</dd>
+					<dt data-bind="visible: editMode">&{'pwdcol'}</dt>
+					<dd data-bind="visible: editMode">
+						<input type="password" class="form-control" id="password" name="password" value="">
+					</dd>
+				</dl>
+			</div>
+		</div>
+
+		<div class="row clearfix" data-bind="visible: !editMode()">
+			<div class="col-md-9 col-md-offset-2 pull-left">
+				<h5>&{'userlikes'}</h5>
+				<em data-bind="visible: likes().length== 0">&{'zero'}</em>
+				<div class="" data-bind='template: {name: "likesTemplate", templateOptions: { likes: likes}}'></div>
+			</div>
+		</div>
+		<div class="row clearfix" data-bind="visible: !editMode()">
+			<div class="col-md-9 col-md-offset-2 pull-left">
+				<h5>&{'userwish'}</h5>
+				<em data-bind="visible: likes().length== 0">&{'zero'}</em>
+				<div class="" data-bind='template: {name: "whishesTemplate", templateOptions: { wishes: wishes}}'></div>
+			</div>
+		</div>
+
+		<div class="row clearfix" data-bind="visible: !editMode()">
+			<div style="clear: both;" class="col-md-2 pull-left">
+				<button type="button" class="btn btn-default top45" data-bind="click: back&{'home'}">&{'back'}</button>
+				<button type="button" class="btn btn-info top45" data-bind="click: editUser">&{'edit'}</button>
+			</div>
+		</div>
+		<div class="row clearfix" data-bind="visible: editMode">
+			<div style="clear: both;" class="col-md-2 pull-left">
+				<button type="button" class="btn btn-default top45" data-bind="click: cancelEdit">&{'cancel'}</button>
+				<button type="submit" class="btn btn-info top45" data-bind="visible: editMode">&{'save'}</button>
+			</div>
+		</div>
+
+
+
+		<div class="form-group">
+			<iframe onload="editResult()" id="edit_target" name="edit_target" src="" width="0" height="0" style="display: none;"></iframe>
+		</div>
+	</form>
+</div>
+
+<script type="text/html" id="likesTemplate">
+	{{each(i,one) likes}}
+		<div class="col-md-3 small-box box" data-bind="attr: {style: 'background-image: url(\'' + one.background +'\')'}, click: function(){
+					showDestinationDetails(one);
+				} ">
+		<div class="box-in">
+			<h5>
+				<a href="#">{{= one.name}}</a>
+			</h5>
+		</div> 
+		</div> 
+	{{/each}}
+</script>
+<script type="text/html" id="whishesTemplate">
+	{{each(i,one) wishes}}
+		<div class="col-md-3 small-box box" data-bind="attr: {style: 'background-image: url(\'' + one.background +'\')'}, click: function(){
+					showDestinationDetails(one);
+				} ">
+		<div class="box-in">
+			<h5>
+				<a href="#">{{= one.name}}</a>
+			</h5>
+		</div> 
+		</div> 
+	{{/each}}
+</script>

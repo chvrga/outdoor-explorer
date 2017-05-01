@@ -1,0 +1,33 @@
+# Application dependencies
+
+require:
+    - play
+    - play -> secure
+    - provided java-client-api 3.0.5
+    - com.fasterxml.jackson.core -> jackson-core 2.4.1
+    - com.fasterxml.jackson.core -> jackson-annotations 2.4.1
+    - com.fasterxml.jackson.core -> jackson-databind 2.4.1
+    - org.slf4j -> slf4j-api 1.7.4
+    - org.jvnet.mimepull -> mimepull 1.9.4
+    - com.sun.jersey -> jersey-core 1.17
+    - com.sun.jersey.contribs -> jersey-multipart 1.17
+    - com.sun.jersey.contribs -> jersey-apache-client4 1.17
+    - com.sun.jersey -> jersey-client 1.17
+    - ch.qos.logback -> logback-classic 1.1.2
+    - commons-logging -> commons-logging 1.1.1
+    - commons-codec -> commons-codec 1.7
+    
+repositories: 
+    - provided: 
+        type:       local 
+        artifact:   "${application.path}/jar/java-client-api-3.0.5.jar" 
+        contains: 
+            - provided -> *
+            
+    - fasterxml: 
+        type: iBiblio
+        root: http://repo1.maven.org/maven2
+        contains: 
+            - com.fasterxml.jackson.core -> *
+            - com.fasterxml.jackson.dataformat -> *
+            

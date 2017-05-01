@@ -1,0 +1,109 @@
+<div class="top container-fluid" id="explorerMain">
+	<!-- Nothing selected yet, main search page -->
+	<div class="row clearfix main">
+		<div class="padded search-div">
+			<div class="search-input">
+				<input id="searchinput" type="text" class="form-control" placeholder="Traveling somewhere?" data-bind="value: searchtext, valueUpdate: 'afterkeydown', executeOnEnter: searchMe, event: { 'keyup': quickSearch } "> <img alt="search" src="public/images/search.png"
+					class="search" data-bind="click: searchMe">
+
+			</div>
+			<div id="suggestion-box" class="suggestion-box">
+				<ul class="list-inline" data-bind='template: {name: "quickSearchTemplate", templateOptions: { suggestions: suggestions}}'></ul>
+			</div>
+		</div>
+		<!-- Current destinations -->
+		<div class="bottom50 destination-div">
+				<div class="clearfix row" style="margin: 1% 0;">
+				<div class="clearfix col-sm-2">
+					<div style="clear: both;" class="pull-left">
+						<a href="#" data-bind="click: showAdvanced">&{'opts'}</a>
+						<p data-bind="visible: isAdvanced">
+						&{'typefilter'}<span data-bind="text: selectedTypeValue"></span><br/>
+						&{'fieldfilter'}<span data-bind="text: selectedFieldValue"></span></p>
+					</div>
+				</div>
+				<div data-bind="visible: isAdvanced">
+					<div class="clearfix col-sm-4">
+						<label for="type" class="">&{'type'}</label>
+						<div class="">
+							<label class="radio-inline" for="inlineType0"> 
+							<input type="radio" name="type" id="inlineType0" value="all" data-bind="checked: selectedTypeValue">&{'all'}
+							</label> 
+							<label class="radio-inline" for="inlineType1"> 
+							<input type="radio" name="type" id="inlineType1" value="city" data-bind="checked: selectedTypeValue">&{'city'}
+							</label> 
+							<label class="radio-inline" for="inlineType2">
+							<input type="radio" name="type" id="inlineType2" value="ski" data-bind="checked: selectedTypeValue">&{'ski'} 
+							</label> 
+							<label class="radio-inline" for="inlineType3"> 
+							<input type="radio" name="type"	id="inlineType3" value="wild" data-bind="checked: selectedTypeValue">&{'wild'}
+							</label>
+						</div>
+					</div>
+					<div class="clearfix col-sm-4">
+						<label for="type" class="">&{'field'}</label>
+						<div class="">
+							<label class="radio-inline" for="inlineField0"> 
+							<input type="radio" name="field" id="inlineField0" value="all" data-bind="checked: selectedFieldValue">&{'all'}
+							</label> 
+							<label class="radio-inline" for="inlineField1"> 
+							<input type="radio" name="field" id="inlineField1" value="name" data-bind="checked: selectedFieldValue">&{'name'}
+							</label> 
+							<label class="radio-inline" for="inlineField2">
+							<input type="radio" name="field" id="inlineField2" value="country" data-bind="checked: selectedFieldValue">&{'country'} 
+							</label> 
+							<label class="radio-inline" for="inlineField3"> 
+							<input type="radio" name="field" id="inlineField3" value="description" data-bind="checked: selectedFieldValue">&{'description'}
+							</label>
+						</div>
+					</div>
+					<div class="col-md-2" style=" padding: 1% 0;">
+						<button type="button" class="btn btn-default" data-bind="click: searchMe">&{'filter'}</button>
+						<button type="submit" class="btn btn-default" data-bind="click: searchAll">&{'clear'}</button>
+					</div>
+				</div>
+			</div>
+	
+			<div data-bind='template: {name: "resortsListTemplate", templateOptions: { resorts: resorts}}'></div>
+		</div>
+		<!-- Add new destination button -->
+		<div class="bottom50"></div>
+	</div>
+</div>
+<script type="text/html" id="resortsListTemplate">
+	{{each(i,resort) resorts}}
+		<div class="col-md-3 box" data-bind="attr: {style: 'background-image: url(\'' + resort.background +'\')'}, click: function(){
+					showDestinationDetails(resort);
+				} ">
+		<div class="box-in" data-bind="click: function(){
+					showDestinationDetails(resort);
+				}">
+			<h4>
+				<a href>{{= resort.name}}</a>
+			</h4>
+		</div> 
+		</div> 
+	{{/each}}
+</script>
+
+<script type="text/html" id="quickSearchTemplate">
+	{{each(i,one) suggestions}}
+		<div class="suggestion" data-bind="click: function(){
+					showDestinationDetails(one);
+				}">
+			<li>{{= one.name}}</li>
+		</div> 
+	{{/each}}
+</script>
+
+<script type="text/javascript">
+	$("#searchinput").focusout(function() {
+		$('#suggestion-box').hide();
+	});
+	$("#searchinput").blur(function() {
+		$('#suggestion-box').hide();
+	});
+	$("#searchinput").focus(function() {
+		$('#suggestion-box').show();
+	});
+</script>

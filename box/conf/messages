@@ -1,0 +1,109 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+
+appname=Outdoor Explorer
+appnaming=Outdoor Exploring 
+withcol=with: 
+home=Home
+users=Users
+add=Add Destination
+register=Register
+
+opts=Search options
+
+typefilter=Type filter: 
+fieldfilter=Field filter: 
+type=Type:
+field=Field:
+
+all=All
+city=City
+ski=Ski resort
+wild=Wild
+
+name=Name
+namecol=Name:
+
+country=Country
+countrycol=Country:
+
+description=Description
+descriptioncol=Description:
+
+website=Website
+websitecol=Website:
+
+logo=Logo
+logocol=Logo:
+logodesc=Upload the logo of this destination (image around 300x300 pixels)
+
+bg=Background
+bgcol=Background:
+bgdesc=Upload a background image for this destination
+
+avatar=Avatar
+avatarcol=Avatar:
+avatardesc=Upload an image around 300x300 pixels
+
+uname=Username
+unamecol=Username:
+last=Last name
+lastcol=Last name:
+first=First name
+firstcol=First name:
+pwd=Password
+pwdcol=Password:
+
+alt=Altitude
+altcol="Altitude:
+
+slopelen=Slopes
+slopelencol=Slopes (total length):
+
+slopecnt=Slopes counts
+slopesntcol=Slope counts (by difficulty):
+
+black=Difficult
+blackcol=Difficult:
+red=Medium
+redcol=Medium:
+blue=Easy
+bluecol=Easy:
+free=Freeride
+freecol=Freeridecol
+
+liketoo=Users also like:
+wishtoo=Users also want to visit:
+none=No matches
+likes=Likes:
+saves=Saves:
+userlikes=This user likes:
+userwish=This user saved to wishlist:
+zero=Nothing :(
+
+login_list=You must sign in to create lists.
+befirst=Be the first!
+login_befirst=Sign to be the first!
+zero_befirst=Zero likes, so far. Sign to be the first!
+
+like=Loved it!
+unlike=I don't like it!
+wish=Save to my wishlist
+unwish=Remove from my wishlist
+
+signin=Sign In
+signout=Sign Out
+back=Back
+edit=Edit
+cancel=Cancel
+save=Save
+create=Create
+filter=Filter
+clear=Clear
+
+dest_double=This destination already exists
+user_double=This username is already in use
+updatedesterr=Failed to update destination
+updateusererr=Failed to update user
+

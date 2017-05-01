@@ -1,0 +1,227 @@
+<div class="top container-fluid" id="resortDetails">
+	<form class="form-horizontal" name="registerUserForm" method="POST" action="@{Application.updateDestination()}" target="edit_target" enctype="multipart/form-data">
+
+		<input type="text" style="display: none;" id="destinationid" name="destinationid" data-bind="value: id"> <input type="text" style="display: none;" id="type" name="type" data-bind="value: type">
+
+		<!-- 		Current destination -->
+		<div class="cover" data-bind="attr: {style: 'background-image: url(\'' + background() +'\')'}">
+			<input class="changecover" type="file" id="background" name="background" data-bind="visible: editMode">
+		</div>
+
+		<div class="pull-left clearfix leftside">
+			<div class="">
+
+				<div id="edit_error" class="form-group hidden">
+					<div class="col-sm-offset-2 col-sm-10">
+						<label class="error">&{'updatedesterr'}</label>
+					</div>
+				</div>
+				<h1 data-bind="text: name, visible: !editMode()"></h1>
+				<input data-bind="value: name, visible: editMode" type="text" class="form-control" id="name" name="name" placeholder="">
+
+				<div class="clearfix">
+					<div class="half pull-left">
+						<dl class="dl-horizontal">
+							<dt>&{'countrycol'}</dt>
+							<dd data-bind="text: country, visible: !editMode()""></dd>
+							<dd data-bind="visible: editMode"">
+								<input data-bind="value: country" type="text" class="form-control" id="country" name="country" placeholder="">
+							</dd>
+
+							<dt data-bind="visible: type() == 'SKI'">&{'altcol'}</dt>
+							<dd data-bind="text: altitude() + kilometer(), visible: type() == 'SKI' && !editMode()"></dd>
+							<dd data-bind="visible: type() == 'SKI' && editMode">
+								<input data-bind="value: altitude()" type="text" class="form-control" id="altitude" name="altitude" placeholder="">
+							</dd>
+
+							<dt data-bind="visible: type() == 'SKI'">&{'slopelencol'}</dt>
+							<dd data-bind="text: slopeLength() + meter(), visible: type() == 'SKI' && !editMode()"></dd>
+							<dd data-bind="visible: type() == 'SKI' && editMode">
+								<input data-bind="value: slopeLength" type="text" class="form-control" id="slopes" name="slopes" placeholder="">
+							</dd>
+							<br />
+							<dt>
+								<a data-bind="attr: {'href': website}, visible: !editMode()">&{'website'}</a>
+							</dt>
+						</dl>
+					</div>
+					<div class="half pull-right">
+						<div class="chart-div" data-bind="visible: type() == 'SKI' && !editMode()">
+							<h5>&{'slopecntcol'}</h5>
+							<div class="">
+								<canvas data-bind="attr: { 'id': canvasId }"></canvas>
+							</div>
+						</div>
+						
+						<div class="" data-bind="visible: type() == 'SKI' && editMode">
+							<dl class="dl-horizontal">
+								<dt for="difficult">&{'blackcol'}</dt>
+								<dd>
+									<input data-bind="value: slopeCounts()['difficult']" type="text" class="form-control" id="difficult" name="difficult" placeholder="">
+								</dd>
+								<dt for="medium">&{'redcol'}</dt>
+								<dd>
+									<input data-bind="value: slopeCounts()['medium']" type="text" class="form-control" id="medium" name="medium" placeholder="">
+								</dd>
+								<dt for="easy">&{'bluecol'}</dt>
+								<dd>
+									<input data-bind="value: slopeCounts()['easy']" type="text" class="form-control" id="easy" name="easy" placeholder="">
+								</dd>
+								<dt for="freeride">&{'freecol'}</dt>
+								<dd>
+									<input data-bind="value: slopeCounts()['freeride']" type="text" class="form-control" id="freeride" name="freeride" placeholder="">
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix">
+					<div data-bind="visible: editMode">
+						<label for="website">&{'websitecol'}</label> <input data-bind="value: website" type="text" class="form-control" id="website" name="website" placeholder="">
+					</div>
+					<h5>&{'descriptioncol'}</h5>
+					<p data-bind="text: description, visible: !editMode()"></p>
+					<textarea data-bind="value: description, visible: editMode" class="form-control" rows="7" id="description" name="description"></textarea>
+				</div>
+			</div>
+
+			<div class="clearfix" data-bind="visible: !editMode()">
+				<h5>&{'liketoo'}</h5>
+				<em data-bind="visible: similarByLike().length== 0">&{'none'}</em>
+				<div class="" data-bind='template: {name: "similarTemplate1", templateOptions: { similarByLike: similarByLike}}'></div>
+			</div>
+
+			<div class="clearfix" data-bind="visible: !editMode()">
+				<h5>&{'wishtoo'}</h5>
+				<em data-bind="visible: similarBySave().length== 0">&{'none'}</em>
+				<div class="" data-bind='template: {name: "similarTemplate2", templateOptions: { similarBySave: similarBySave}}'></div>
+			</div>
+		</div>
+
+		<div class="pull-right clearfix rightside">
+			<div class="">
+				<img class="" alt="name" title="name" data-bind="attr: { 'src': logo }"> <input class="changelogo" type="file" id="logo" name="logo" data-bind="visible: editMode">
+				<div data-bind="visible: !editMode()">
+					#{if connected}
+					<dl class="dl-horizontal">
+						<dt>&{'likes'}
+						</dt>
+						<dd data-bind="text: usersLiked().length "></dd>
+						<dt>&{'saves'}
+						</dt>
+						<dd data-bind="text: usersSaved().length "></dd>
+					</dl>
+					#{/if} #{else}
+					<div class="top20">
+						<em>&{'login_list'}</em>
+					</div>
+					#{/else}
+				</div>
+				<div data-bind="visible: !editMode()">
+					#{if connected}
+					<dl class="dl-horizontal">
+						<dt>
+							<a href data-bind="click: loveIt, visible: !IlikeIt()">&{'like'}</a> 
+							<a href data-bind="click: loveIt, visible: IlikeIt()">&{'unlike'}</a>
+						</dt>
+						<dd></dd>
+						<dt>
+							<a href data-bind="click: addToWishlist, visible: !savedIt()">&{'wish'}</a>
+							<a href data-bind="click: addToWishlist, visible: savedIt()">&{'unwish'}</a>
+						</dt>
+						<dd></dd>
+					</dl>
+					#{/if}
+				</div>
+			</div>
+
+			<div class="clearfix" data-bind="visible: !editMode()">
+				<h5>&{'users'} who like this:</h5>
+				<em data-bind="visible: usersLiked().length== 0"> #{if connected} <a href data-bind="click: loveIt">&{'befirst'}</a> #{/if} #{else} &{'zero_befirst'} #{/else}
+				</em>
+				<ul class="list-inline" data-bind='template: {name: "userListTemplate1", templateOptions: { usersLiked: usersLiked}}'></ul>
+			</div>
+
+
+			<div class="clearfix" data-bind="visible: !editMode()">
+				<h5>&{'users'} who wish to go here:</h5>
+				<em data-bind="visible: usersSaved().length== 0"> #{if connected} <a href data-bind="click: addToWishlist">&{'befirst'}</a> #{/if} #{else} &{'login_befirst'} #{/else}
+				</em>
+				<ul class="list-inline" data-bind='template: {name: "userListTemplate2", templateOptions: { usersSaved: usersSaved}}'></ul>
+			</div>
+		</div>
+
+		<div class="row clearfix" data-bind="visible: !editMode()">
+			<div style="clear: both;" class="col-md-2 pull-left">
+				<button type="button" class="btn btn-default top45" data-bind="click: back&{'home'}">&{'back'}</button>
+				#{if connected}
+				<button type="button" class="btn btn-info top45" data-bind="click: editDestination">&{'edit'}</button>
+				#{/if}
+			</div>
+		</div>
+		#{if connected}
+		<div class="row clearfix" data-bind="visible: editMode">
+			<div style="clear: both;" class="col-md-2 pull-left">
+				<button type="button" class="btn btn-default top45" data-bind="click: cancelEdit">&{'cancel'}</button>
+				<button type="submit" class="btn btn-info top45" data-bind="visible: editMode">&{'save'}</button>
+			</div>
+		</div>
+		#{/if}
+		<div class="form-group">
+			<iframe onload="editDstResult()" id="edit_target" name="edit_target" src="" width="0" height="0" style="display: none;"></iframe>
+		</div>
+	</form>
+</div>
+
+<script type="text/html" id="userListTemplate1">
+	{{each(i,user) usersLiked}}
+		<div class="col-md-3 micro-box box" data-bind="attr: {style: 'background-image: url(\'' + user.avatar +'\')'}, click: function(){
+					showUserDetails(user);
+				}" ">
+		<div class="user-box-in">
+			<h4>
+				<a href="#">{{= user.username}}</a>
+			</h4>
+		</div> 
+		</div> 
+	{{/each}}
+</script>
+<script type="text/html" id="userListTemplate2">
+	{{each(i,user) usersSaved}}
+		<div class="col-md-3 micro-box box" data-bind="attr: {style: 'background-image: url(\'' + user.avatar +'\')'}, click: function(){
+					showUserDetails(user);
+				}" ">
+		<div class="user-box-in">
+			<h4>
+				<a href="#">{{= user.username}}</a>
+			</h4>
+		</div> 
+		</div> 
+	{{/each}}
+</script>
+<script type="text/html" id="similarTemplate1">
+	{{each(i,one) similarByLike}}
+		<div class="col-md-3 small-box box" data-bind="attr: {style: 'background-image: url(\'' + one.similar_background +'\')'}, click: function(){
+					showDestinationDetails(one);
+				} ">
+		<div class="box-in">
+			<h5>
+				<a href="#" >{{= one.similar_name}}</a>
+			</h5>
+		</div> 
+		</div> 
+	{{/each}}
+</script>
+<script type="text/html" id="similarTemplate2">
+	{{each(i,one) similarBySave}}
+		<div class="col-md-3 small-box box" data-bind="attr: {style: 'background-image: url(\'' + one.similar_background +'\')'}, click: function(){
+					showDestinationDetails(one);
+				} ">
+		<div class="box-in">
+			<h5>
+				<a href="#" >{{= one.similar_name}}</a>
+			</h5>
+		</div> 
+		</div> 
+	{{/each}}
+</script>
