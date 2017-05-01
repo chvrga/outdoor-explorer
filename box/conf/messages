@@ -56,13 +56,13 @@ pwd=Password
 pwdcol=Password:
 
 alt=Altitude
-altcol="Altitude:
+altcol=Altitude:
 
 slopelen=Slopes
 slopelencol=Slopes (total length):
 
 slopecnt=Slopes counts
-slopesntcol=Slope counts (by difficulty):
+slopecntcol=Slope counts (by difficulty):
 
 black=Difficult
 blackcol=Difficult:
