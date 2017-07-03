@@ -21,4 +21,22 @@ box/eclipse/.classpath
 
 box/eclipse/.project
 
+# Launch
 *.launch
+
+# Ignore Play! working directory #
+bin/
+/db
+.eclipse
+/lib/
+/logs/
+/modules
+/project/target
+/target
+tmp/
+test-result
+server.pid
+*.eml
+/dist/
+.cache
+
