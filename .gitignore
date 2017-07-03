@@ -17,9 +17,7 @@ box/.project
 
 *.prefs
 
-box/eclipse/.classpath
-
-box/eclipse/.project
+box/eclipse/*
 
 # Launch
 *.launch
@@ -28,15 +26,16 @@ box/eclipse/.project
 bin/
 /db
 .eclipse
-/lib/
-/logs/
-/modules
-/project/target
-/target
+box/precompiled
+box/lib/
+box/logs/
+box/modules
+box/project/target
+box/target
 tmp/
 test-result
 server.pid
 *.eml
-/dist/
+box/dist/
 .cache
 
