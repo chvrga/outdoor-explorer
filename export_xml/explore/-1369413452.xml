@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<explore id="-1369413452" type="CITY" xmlns="http://chvrga.org/explore">
+<name>Reykjavik</name>
+<country>Iceland</country>
+<description>Reykjavík is believed to be the location of the first permanent settlement in Iceland, which, according to Ingólfur Arnarson, was established in AD 874. Until the 19th century, there was no urban development in the city location. The city was founded in 1786 as an official trading town and grew steadily over the next decades, as it transformed into a regional and later national centre of commerce, population, and governmental activities. It is among the cleanest, greenest, and safest cities in the world.</description>
+<website>http://www.visitreykjavik.is/</website>
+<logo>public/images/logos/reykjavik.png</logo>
+<background>public/images/backgrounds/reykjavik.jpg</background>
+</explore>

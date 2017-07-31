@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<explore id="580082940" type="SKI" xmlns="http://chvrga.org/explore">
+<name>Jahorina</name>
+<country>Bosnia and Herzegovina</country>
+<description>Jahorina Olympic Ski Resort is the biggest and most popular ski resort in Bosnia and Herzegovina and offers a variety of outdoor sports and activities. It is primarily a destination for alpine skiing, snowboarding, hiking, and sledding, with over 40 km (25 mi) of ski slopes and modern facilities. </description>
+<website>http://oc-jahorina.com/en/</website>
+<logo>public/images/logos/jahorina.png</logo>
+<background>public/images/backgrounds/jahorina.png</background>
+<altitude>1916</altitude>
+<slopeCounts>
+
+<difficult>1</difficult>
+<medium>15</medium>
+<easy>6</easy>
+<freeride>11</freeride>
+
+</slopeCounts>
+<slopeLength>25</slopeLength>
+</explore>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<explore id="-2078409640" type="SKI" xmlns="http://chvrga.org/explore">
+<name>Bansko</name>
+<country>Bulgaria</country>
+<description>Bansko ski resort is the best winter resort in Bulgaria with the longest ski runs and the richest cultural history. The town of Bansko is situated at the foot of the Pirin mountain in the south-western Bulgaria, 160 km from Sofia. The resort offers excellent ski and snowboard conditions and infrastructure. A lot of hotels of various standards and prices are available for booking on-line. Regarding Apres ski - the resort offers hundreds of bars and traditional restaurants called 'mehana'. Bansko mountain resort is an excellent choice for your ski and snowboard holiday in Bulgaria.</description>
+<website>http://www.banskoski.com/en</website>
+<logo>public/images/logos/bansko.png</logo>
+<background>public/images/backgrounds/bansko.png</background>
+<altitude>2560</altitude>
+<slopeCounts>
+
+<difficult>2</difficult>
+<medium>11</medium>
+<easy>8</easy>
+<freeride>2</freeride>
+
+</slopeCounts>
+<slopeLength>65</slopeLength>
+</explore>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<explore id="-1183013963" type="SKI" xmlns="http://chvrga.org/explore">
+<name>Les Arcs</name>
+<country>France</country>
+<description>The five areas—Bourg-Saint-Maurice, Arc 1600, Arc 1800, Arc 1950, and Arc 2000—are situated at an altitude spanning from 810 to 3226 metres, although skiing is mostly possible above 1200 metres. The ski area consists of 106 runs, 54 lifts, and 200 kilometres of descent. The highest peak in the resort is the Aiguille Rouge (Red Needle) from where is a 7 km long piste with 2026 metres in vertical drop down to the Village Villaroger. Since the opening of the Vanoise Express cable car in December 2003, Les Arcs has become part of the Paradiski group of ski-connected resorts, which also includes the La Plagne area. Paradiski in total has 425 km of pistes.</description>
+<website>http://en.lesarcs.com/</website>
+<logo>public/images/logos/lesarcs.png</logo>
+<background>public/images/backgrounds/paradiski2.png</background>
+<altitude>2466</altitude>
+<slopeCounts>
+
+<difficult>17</difficult>
+<medium>64</medium>
+<easy>44</easy>
+<freeride>1</freeride>
+
+</slopeCounts>
+<slopeLength>425</slopeLength>
+</explore>

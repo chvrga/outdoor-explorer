@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<explore id="-2051324252" type="SKI" xmlns="http://chvrga.org/explore">
+<name>Les 2 Alpes</name>
+<country>France</country>
+<description>This vibrant, sporty and fashionable international ski resort is among the biggest and most famous in the world. Les 2 Alpes was built in 1946 on the former high pastures of Venosc and Mont de Lans, two parish villages in the Isère where the northern and southern Alps meet.</description>
+<website>http://www.les2alpes.com/en</website>
+<logo>public/images/logos/les2alpes.png</logo>
+<background>public/images/backgrounds/les2alpes.png</background>
+<altitude>3600</altitude>
+<slopeCounts>
+
+<difficult>12</difficult>
+<medium>22</medium>
+<easy>45</easy>
+<freeride>18</freeride>
+
+</slopeCounts>
+<slopeLength>141</slopeLength>
+</explore>

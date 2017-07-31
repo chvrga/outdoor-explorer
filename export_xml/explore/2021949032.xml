@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<explore id="2021949032" type="SKI" xmlns="http://chvrga.org/explore">
+<name>Nassfeld</name>
+<country>Austria</country>
+<description>Amazingly generous, vast, snow-reliable and almost unbeatable when it comes to the mountain panorama; anyone who comes to Nassfeld, one of Austria’s TOP 10 ski resorts, can expect quite something. But the ski resort can even top that and provides its guests with moments of surprise that bring a smile to their faces. Special aha moments for sports and leisure skiers are waiting at every “corner“ of the well-developed ski resorts with its 30 modern mountain railways and lifts and 110 kilometres of pistes. Whether snow park, fun slope, freeride areas or Ski Movie race track – simply look out for the “Nice Surprise“ information boards and discover a completely new side to winter sport!</description>
+<website>http://www.nassfeld.at/</website>
+<logo>public/images/logos/nassfeld.png</logo>
+<background>public/images/backgrounds/nassfeld.png</background>
+<altitude>2200</altitude>
+<slopeCounts>
+
+<difficult>11</difficult>
+<medium>69</medium>
+<easy>30</easy>
+<freeride>0</freeride>
+
+</slopeCounts>
+<slopeLength>110</slopeLength>
+</explore>
