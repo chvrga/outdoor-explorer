@@ -1,5 +1,4 @@
 *.class
-*.pyc
 .DS_Store
 
 # Mobile Tools for Java (J2ME)
@@ -12,32 +11,45 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-box/.classpath
+java/box/.classpath
+java\box\.classpath
 
-box/.project
+java/box/.project
+java\box\.project
 
 *.prefs
 
-box/eclipse/*
+java/box/eclipse/*
+java\box\eclipse\*
 
 # Launch
 *.launch
 
 # Ignore Play! working directory #
-bin/
-/db
+bin\
+\db
 .eclipse
-box/precompiled
-box/lib/
-box/logs/
-box/modules
-box/project/target
-box/target
+java/box/precompiled
+java/box/lib/
+java/box/logs/
+java/box/modules
+java/box/project/target
+java/box/target
+
+java\box\precompiled
+java\box\lib\
+java\box\logs\
+java\box\modules
+java\box\project\target
+java\box\target
+
 tmp/
 test-result
 server.pid
 *.eml
-box/dist/
+java/box/dist/
 .cache
 
 *.json
+*.pyc
+
