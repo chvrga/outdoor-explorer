@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<explore id="1389507525" type="CITY" xmlns="http://chvrga.org/explore">
+<name>Stockholm</name>
+<country>Sweden</country>
+<description>Stockholm is the cultural, media, political, and economic centre of Sweden. The Stockholm region alone accounts for over a third of the country's GDP, and is among the top 10 regions in Europe by GDP per capita. It is an important global city, and the main centre for corporate headquarters in the Nordic region. The city is home to some of Europe's top ranking universities, such as the Stockholm School of Economics, Karolinska Institute and Royal Institute of Technology (KTH). It hosts the annual Nobel Prize ceremonies and banquet at the Stockholm Concert Hall and Stockholm City Hall. One of the city's most prized museums, the Vasa Museum, is the most visited non-art museum in Scandinavia. The Stockholm metro, opened in 1950, is well known for its decoration of the stations; it has been called the longest art gallery in the world. Sweden's national football arena is located north of the city centre, in Solna. Ericsson Globe, the national indoor arena, is in the southern part of the city. The city was the host of the 1912 Summer Olympics, and hosted the equestrian portion of the 1956 Summer Olympics otherwise held in Melbourne, Victoria, Australia.</description>
+<website>https://www.visitstockholm.com/</website>
+<logo>public/images/logos/stockholm.svg</logo>
+<background>public/images/backgrounds/stockholm.png</background>
+</explore>

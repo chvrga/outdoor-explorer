@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<explore id="1649594241" type="SKI" xmlns="http://chvrga.org/explore">
+<name>Mayrhofen</name>
+<country>Austria</country>
+<description>An unforgettable mountain experience in one of the most active regions of the Alps – not just a motto but Mayrhofen's promise to its guests. The popular skiing area offers 136 kilometres of piste, 57 lifts and countless other winter sports activities for action enthusiasts and families as well as those who prefer a more leisurely style of vacation.</description>
+<website>http://www.mayrhofen.at/</website>
+<logo>/images/logos/mayrhofen.png</logo>
+<background>/images/backgrounds/mayrhofen.jpg</background>
+<altitude>2500</altitude>
+<slopeCounts>
+
+<difficult>8</difficult>
+<medium>23</medium>
+<easy>16</easy>
+<freeride>0</freeride>
+
+</slopeCounts>
+<slopeLength>136</slopeLength>
+</explore>

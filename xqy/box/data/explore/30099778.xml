@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<explore id="30099778" type="SKI" xmlns="http://chvrga.org/explore">
+<name>Tignes</name>
+<country>France</country>
+<description>Just as Paris has the Eiffel Tower so London has “Big Ben” and New York the Statue of Liberty; when it comes to Tignes, it’s the lake, the glacier and its hydroelectric dam that stand out. From natural masterpieces to a gigantic man-made monument, take a look at three of the best features in Tignes…</description>
+<website>http://en.tignes.net/</website>
+<logo>/images/logos/tignes.png</logo>
+<background>/images/backgrounds/tignes.png</background>
+<altitude>3456</altitude>
+<slopeCounts>
+
+<difficult>16</difficult>
+<medium>22</medium>
+<easy>36</easy>
+<freeride>21</freeride>
+
+</slopeCounts>
+<slopeLength>89</slopeLength>
+</explore>

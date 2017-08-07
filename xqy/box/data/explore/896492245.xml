@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<explore id="896492245" type="SKI" xmlns="http://chvrga.org/explore">
+<name>Kopaonik</name>
+<country>Serbia</country>
+<description>Kopaonik is the largest ski resort in Serbia with excellently prepared runs, which offers unlimited joy to all categories of skiers, from beginners to highly skilled ones. Kopaonik ski resort comprises of about 55km of runs for alpine skiing and 12 km of runs for cross country (nordic) skiing. For those who enjoy skiing at night, we have prepared a lighted run 'Malo Jezero' in the very centre of the resort. Apart from that, for the youngest skiers and all those who are taking their first ski steps, we have prepared a secured 'ski kindergarten' area with a conveyor belt and a carousel which makes learning basic skiing skills easier.</description>
+<website>http://www.eng.infokop.net/</website>
+<logo>/images/logos/kopaonik.png</logo>
+<background>/images/backgrounds/kopaonik.png</background>
+<altitude>2017</altitude>
+<slopeCounts>
+
+<difficult>11</difficult>
+<medium>22</medium>
+<easy>20</easy>
+<freeride>21</freeride>
+
+</slopeCounts>
+<slopeLength>55</slopeLength>
+</explore>
