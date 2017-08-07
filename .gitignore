@@ -12,15 +12,12 @@
 hs_err_pid*
 
 java/box/.classpath
-java\box\.classpath
 
 java/box/.project
-java\box\.project
 
 *.prefs
 
-java/box/eclipse/*
-java\box\eclipse\*
+java/box/eclipse
 
 # Launch
 *.launch
@@ -30,26 +27,19 @@ bin\
 \db
 .eclipse
 java/box/precompiled
-java/box/lib/
-java/box/logs/
+java/box/lib
+java/box/logs
 java/box/modules
 java/box/project/target
 java/box/target
 
-java\box\precompiled
-java\box\lib\
-java\box\logs\
-java\box\modules
-java\box\project\target
-java\box\target
 
 tmp/
 test-result
 server.pid
 *.eml
-java/box/dist/
+java/box/dist
 .cache
 
 *.json
 *.pyc
-
