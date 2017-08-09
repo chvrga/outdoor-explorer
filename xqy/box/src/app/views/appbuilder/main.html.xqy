@@ -125,7 +125,7 @@ return
                   }
 
                   <div style="">
-                    <h4><a href="/details?uri={$result/@uri}">{$doc/ex:name/string()}</a></h4>
+                    <h4><a href="/general?uri={$result/@uri}">{$doc/ex:name/string()}</a></h4>
                   </div>
                   {
                   (:<div style="">

@@ -14,7 +14,6 @@ declare function gen:main()
 {
 	(: Tab here to start coding :)
 	  let $uri as xs:string := req:get("uri", "", "type=xs:string")
-	  let $page := req:get("page", 1, "type=xs:int")
 	  return
 	  (
 	    ch:add-value("response", s:document($uri))
@@ -22,5 +21,3 @@ declare function gen:main()
 	  ch:use-view((), "xml"),
 	  ch:use-layout((), "xml")
 };
-
-

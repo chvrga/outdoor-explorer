@@ -11,7 +11,7 @@ import module namespace ch = "http://marklogic.com/roxy/controller-helper" at "/
 import module namespace s = "http://marklogic.com/roxy/models/search" at "/app/models/search-lib.xqy";
 
 
-declare function i:main()
+declare function i:main() as item()*
 {
 	(: Tab here to start coding :)
 
@@ -28,7 +28,7 @@ declare function i:main()
 };
 
 
-declare function i:document-details()
+declare function i:docdetails() as item()*
 {
 	(: Tab here to start coding :)
 	let $uri as xs:string := req:get("uri", "", "type=xs:string")

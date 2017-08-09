@@ -65,16 +65,16 @@ declare variable $c:ROXY-ROUTES :=
       <http method="HEAD"/>
     </request>
 
-    <request uri="^/image?uri=(.+)" endpoint="/roxy/query-router.xqy">
+    <request uri="^/image?uri=(.+)$" endpoint="/roxy/query-router.xqy">
       <uri-param name="controller">image</uri-param>
       <uri-param name="func">main</uri-param>
       <uri-param name="uri">$1</uri-param>
       <http-method>GET</http-method>
     </request>
     
-    <request uri="^/details?uri=(.+)" endpoint="/roxy/query-router.xqy">
-      <uri-param name="controller">image</uri-param>
-      <uri-param name="func">document-details</uri-param>
+    <request uri="^/general?uri=(.+)$" endpoint="/roxy/query-router.xqy">
+      <uri-param name="controller">general</uri-param>
+      <uri-param name="func">main</uri-param>
       <uri-param name="uri">$1</uri-param>
       <http-method>GET</http-method>
     </request>
