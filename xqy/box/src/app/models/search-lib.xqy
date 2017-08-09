@@ -27,6 +27,7 @@ declare option xdmp:mapping "false";
 
 declare function m:search($query as xs:string, $page as xs:int)
 {
+  xdmp:log(fn:concat("search query: ", $query)),
   let $start := ($page - 1) * $c:DEFAULT-PAGE-LENGTH + 1
   return
     search:search($query, $c:SEARCH-OPTIONS, $start, $c:DEFAULT-PAGE-LENGTH)

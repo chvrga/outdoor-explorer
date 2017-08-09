@@ -37,11 +37,19 @@ declare option xdmp:mapping "false";
  :)
 declare function c:main() as item()*
 {
-  let $q as xs:string := req:get("q", "", "type=xs:string")
+  let $q as xs:string := 
+    let $temp := req:get("q", "", "type=xs:string")
+    return 
+        if (fn:empty($temp) || fn:matches($temp, "^user.*")) then
+        ($temp)
+        else fn:concat("collection:explore AND ", $temp)
+  
+
   let $page := req:get("page", 1, "type=xs:int")
+  
   return
   (
-    ch:add-value("response", s:search(fn:concat("collection:explore AND ", $q), $page)),
+    ch:add-value("response", s:search($q, $page)),
     ch:add-value("sidebar_response", s:facets($q, $page)),
     ch:add-value("q", $q),
     ch:add-value("page", $page)
@@ -50,15 +58,3 @@ declare function c:main() as item()*
   ch:use-layout((), "xml")
 };
 
-declare function c:details()
-{
-  (: Tab here to start coding :)
-  let $uri as xs:string := req:get("uri", "", "type=xs:string")
-  let $page := req:get("page", 1, "type=xs:int")
-  return
-  (
-    ch:add-value("response", s:document($uri))
-  ),
-  ch:use-view((), "xml"),
-  ch:use-layout((), "xml")
-};
