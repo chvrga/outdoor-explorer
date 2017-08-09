@@ -27,6 +27,8 @@ bin\
 \db
 .eclipse
 java/box/precompiled
+java/box/precompiled/templates
+
 java/box/lib
 java/box/logs
 java/box/modules
@@ -47,3 +49,4 @@ java/box/.classpath
 java/box/.classpath
 java/box/.classpath
 java/box/modules/secure
+java/box/precompiled/templates/app/views/Application/explorer.html
