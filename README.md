@@ -1,5 +1,9 @@
 # Outdoor Explorer
 
+## Test 1
+## Test 2
+## Test 3
+
 ## Idea
 
 Outdoor Explorer is a community of travellers for travellers. It is a place for you to tell others where you’ve been and what you enjoyed. It is also a place for you to see where others have been and what they liked. 
