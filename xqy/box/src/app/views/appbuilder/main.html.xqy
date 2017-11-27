@@ -113,6 +113,7 @@ return
         return
           <div class="result">
           {
+            (: destination list look :)
             if (fn:matches($result/@uri/string(),"/explore.*")) then 
               (
                 <div class="col-md-3 box" style="background-image: url('/image?uri={xdmp:url-encode($doc/ex:background/string())}')">
@@ -135,8 +136,51 @@ return
                 </div>
                 </div>
               )
-              else ""
-              
+              else
+              (
+              (: user details look:)
+              if (fn:matches($result/@uri/string(),"/user.*")) then 
+                  (
+                  <div>
+                      <div class="row clearfix">
+                        <div class="col-md-2 pull-left">
+                          <img class="avatar small-box box" alt="name" title="name" src="/image?uri={xdmp:url-encode($doc/us:avatar/text())}" /> 
+                          <a href=" " >more details</a>
+                        </div>
+
+                        <div class="col-md-9 pull-left bottom45">
+                          <dl class="dl-horizontal">
+                            <dt>Username:</dt>
+                            <dd>{$doc/us:username/string()}</dd>
+
+                            <dt>Firstname:</dt>
+                            <dd>{$doc/us:firstname/string()}</dd>
+                            
+                            <dt>Lastname: </dt>
+                            <dd>{$doc/us:lastname/string()}</dd>
+                            
+                          </dl>
+                        </div>
+                      </div>
+                 
+
+                      <div class="row clearfix">
+                        <div class="col-md-9 col-md-offset-2 pull-left">
+                          <h5>This user likes:</h5>
+                          
+                        </div>
+                      </div>
+                      <div class="row clearfix">
+                        <div class="col-md-9 col-md-offset-2 pull-left">
+                          <h5>This user wants to visit:</h5>
+                          
+                        </div>
+                      </div>
+                  </div>
+                  )
+              else
+                ""
+              )
               
           }
           </div>

@@ -139,6 +139,14 @@ declare variable $c:SEARCH-OPTIONS :=
       </range>
     </constraint>
 
+    <constraint name="list_type">
+      <range type="xs:string" collation="http://marklogic.com/collation/" facet="true">
+        <element ns="http://chvrga.org/list" name="list"/>
+         <attribute ns="" name="type"/>
+         <facet-option>limit=10</facet-option>
+      </range>
+    </constraint>
+    
     <return-facets>true</return-facets>  
     <return-results>true</return-results>
     <return-query>true</return-query>
